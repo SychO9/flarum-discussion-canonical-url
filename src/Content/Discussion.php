@@ -15,6 +15,8 @@ class Discussion extends \Flarum\Forum\Content\Discussion
             ->to('forum')
             ->route('discussion', ['id' => $document->payload['apiDocument']->data->attributes->slug]);
 
+        $document->page = null;
+
         return $document;
     }
 }
